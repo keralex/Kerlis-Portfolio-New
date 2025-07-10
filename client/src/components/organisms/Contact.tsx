@@ -25,72 +25,76 @@ function Contact() {
           </p>
         </motion.div>
         
-        <div className="max-w-5xl mx-auto">
-          {/* Contact Info Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            {/* Get in Touch */}
+        <div className="max-w-6xl mx-auto">
+          {/* Contact Info Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Contact Details */}
             <motion.div
-              className="lg:col-span-2 bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-300"
+              className="space-y-6"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Get in Touch</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <ContactInfo
-                  icon="fas fa-envelope"
-                  label="Email"
-                  value={personalInfo.email}
-                  href={`mailto:${personalInfo.email}`}
-                />
-                <ContactInfo
-                  icon="fas fa-phone"
-                  label="Phone"
-                  value={personalInfo.phone}
-                  href={`tel:${personalInfo.phone}`}
-                />
-                <ContactInfo
-                  icon="fas fa-map-marker-alt"
-                  label="Location"
-                  value={personalInfo.location}
-                />
-                <ContactInfo
-                  icon="fas fa-globe"
-                  label="Languages"
-                  value={personalInfo.languages.join(", ")}
-                />
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-300">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Contact Information</h3>
+                <div className="space-y-4">
+                  <ContactInfo
+                    icon="fas fa-envelope"
+                    label="Email"
+                    value={personalInfo.email}
+                    href={`mailto:${personalInfo.email}`}
+                  />
+                  <ContactInfo
+                    icon="fas fa-phone"
+                    label="Phone"
+                    value={personalInfo.phone}
+                    href={`tel:${personalInfo.phone}`}
+                  />
+                  <ContactInfo
+                    icon="fas fa-map-marker-alt"
+                    label="Location"
+                    value={personalInfo.location}
+                  />
+                  <ContactInfo
+                    icon="fas fa-globe"
+                    label="Languages"
+                    value={personalInfo.languages.join(", ")}
+                  />
+                </div>
               </div>
             </motion.div>
             
-            {/* Download CV */}
+            {/* Download CV Section */}
             <motion.div
-              className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-300"
+              className="space-y-6"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="text-center">
-                <div className="w-16 h-16 retro-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-download text-white text-xl"></i>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-300 h-full flex flex-col justify-center">
+                <div className="text-center">
+                  <div className="w-20 h-20 retro-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i className="fas fa-file-pdf text-white text-2xl"></i>
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Download My CV</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-8">Get a complete overview of my experience, skills, and achievements in a downloadable PDF format.</p>
+                  <Button
+                    size="lg"
+                    className="w-full max-w-xs mx-auto"
+                    icon={<i className="fas fa-download"></i>}
+                    iconPosition="left"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/attached_assets/CV_ KERLIS AGUADO_FRONTEND_DEVELOPER (1)_1752170801413.pdf';
+                      link.download = 'Kerlis_Aguado_CV.pdf';
+                      link.click();
+                    }}
+                  >
+                    Download PDF
+                  </Button>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Download CV</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm">Get a copy of my complete resume</p>
-                <Button
-                  size="lg"
-                  className="w-full"
-                  icon={<i className="fas fa-file-pdf"></i>}
-                  iconPosition="left"
-                  onClick={() => {
-                    const link = document.createElement('a');
-                    link.href = '/attached_assets/CV_ KERLIS AGUADO_FRONTEND_DEVELOPER (1)_1752170801413.pdf';
-                    link.download = 'Kerlis_Aguado_CV.pdf';
-                    link.click();
-                  }}
-                >
-                  Download PDF
-                </Button>
               </div>
             </motion.div>
           </div>
