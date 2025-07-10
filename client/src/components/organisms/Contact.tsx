@@ -87,7 +87,7 @@ function Contact() {
                     iconPosition="left"
                     onClick={() => {
                       const link = document.createElement('a');
-                      link.href = '/attached_assets/CV_ KERLIS AGUADO_FRONTEND_DEVELOPER (1)_1752170801413.pdf';
+                      link.href = '/CV_ KERLIS AGUADO_FRONTEND_DEVELOPER (1)_1752170801413.pdf';
                       link.download = 'Kerlis_Aguado_CV.pdf';
                       link.click();
                     }}
