@@ -1,14 +1,7 @@
-import { Toaster } from "@/components/ui/toaster";
-import Home from "@/pages/Home";
-import { ThemeProvider } from "@/hooks/useTheme";
+import SimpleApp from "./SimpleApp";
 
 function App() {
-  return (
-    <ThemeProvider>
-      <Toaster />
-      <Home />
-    </ThemeProvider>
-  );
+  return <SimpleApp />;
 }
 
 export default App;

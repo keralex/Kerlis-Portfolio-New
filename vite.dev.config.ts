@@ -13,6 +13,8 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5000,
     allowedHosts: "all",
+    strictPort: false,
   },
-  publicDir: path.resolve(import.meta.dirname, "public"),
+  publicDir: "public",
+  root: ".",
 });
