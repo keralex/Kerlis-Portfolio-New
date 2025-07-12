@@ -7,9 +7,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const rootDir = join(__dirname, '..');
 
-// Start Vite development server directly on port 5000
+// Start Vite development server directly on port 5000 with allowed hosts
 console.log('Starting Vite development server on port 5000...');
-const viteProcess = spawn('vite', ['--host', '0.0.0.0', '--port', '5000'], {
+const viteProcess = spawn('vite', [
+  '--host', '0.0.0.0', 
+  '--port', '5000',
+  '--config', './vite.dev.config.ts'
+], {
   cwd: rootDir,
   stdio: 'inherit'
 });
