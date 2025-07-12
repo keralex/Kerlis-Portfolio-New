@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Logo } from "@/components/atoms/Logo";
-import { NavLink } from "@/components/molecules/NavLink";
-import { useTheme } from "@/hooks/useTheme";
-import { useScrollspy } from "@/hooks/useScrollspy";
+import { Logo } from "../atoms/Logo";
+import { NavLink } from "../molecules/NavLink";
+import { useTheme } from "../../hooks/useTheme";
+import { useScrollspy } from "../../hooks/useScrollspy";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navigationItems = [
@@ -23,7 +23,7 @@ function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Logo />
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -38,7 +38,7 @@ function Navigation() {
               ))}
             </div>
           </div>
-          
+
           {/* Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <motion.button
@@ -53,7 +53,7 @@ function Navigation() {
                 <i className="fas fa-moon text-gray-700"></i>
               )}
             </motion.button>
-            
+
             <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
@@ -65,7 +65,7 @@ function Navigation() {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (

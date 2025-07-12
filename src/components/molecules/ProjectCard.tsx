@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Badge } from "@/components/atoms/Badge";
+import { Badge } from "../atoms/Badge";
 
 interface ProjectCardProps {
   title: string;
@@ -17,9 +17,9 @@ function ProjectCard({ title, description, image, technologies, demoUrl, githubU
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <img 
-        src={image} 
-        alt={title} 
+      <img
+        src={image}
+        alt={title}
         className="w-full h-48 object-cover"
       />
       <div className="p-6">

@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { motion } from "framer-motion";
 import { forwardRef } from "react";
 
@@ -11,18 +11,18 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ 
-    className, 
-    variant = "primary", 
-    size = "md", 
-    icon, 
+  ({
+    className,
+    variant = "primary",
+    size = "md",
+    icon,
     iconPosition = "right",
     animate = true,
-    children, 
-    ...props 
+    children,
+    ...props
   }, ref) => {
     const baseClasses = "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
-    
+
     const variants = {
       primary: "retro-gradient text-white hover:opacity-90 focus:ring-purple-500",
       secondary: "retro-gradient-alt text-white hover:opacity-90 focus:ring-indigo-500",

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/atoms/Button";
-import { ContactInfo } from "@/components/molecules/ContactInfo";
-import { personalInfo } from "@/data/portfolio";
+import { Button } from "../atoms/Button";
+import { ContactInfo } from "../molecules/ContactInfo";
+import { personalInfo } from "../../data/portfolio";
 
 function Contact() {
 
@@ -24,7 +24,7 @@ function Contact() {
             Let's connect and discuss your next project
           </p>
         </motion.div>
-        
+
         <div className="max-w-6xl mx-auto">
           {/* Contact Info Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -64,7 +64,7 @@ function Contact() {
                 </div>
               </div>
             </motion.div>
-            
+
             {/* Download CV Section */}
             <motion.div
               className="space-y-6"
@@ -98,7 +98,7 @@ function Contact() {
               </div>
             </motion.div>
           </div>
-          
+
           {/* Social Links */}
           <motion.div
             className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-300"
@@ -124,7 +124,7 @@ function Contact() {
                   </div>
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">LinkedIn</span>
                 </motion.a>
-                
+
                 <motion.a
                   href="#"
                   className="group flex flex-col items-center space-y-3"
@@ -136,7 +136,7 @@ function Contact() {
                   </div>
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">GitHub</span>
                 </motion.a>
-                
+
                 <motion.a
                   href="#"
                   className="group flex flex-col items-center space-y-3"
@@ -148,7 +148,7 @@ function Contact() {
                   </div>
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Twitter</span>
                 </motion.a>
-                
+
                 <motion.a
                   href={`mailto:${personalInfo.email}`}
                   className="group flex flex-col items-center space-y-3"

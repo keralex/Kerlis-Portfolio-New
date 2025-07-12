@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { ProjectCard } from "@/components/molecules/ProjectCard";
-import { projects } from "@/data/portfolio";
+import { ProjectCard } from "../molecules/ProjectCard";
+import { projects } from "../../data/portfolio";
 
 function Projects() {
   return (
@@ -22,7 +22,7 @@ function Projects() {
             A showcase of my recent work and side projects
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div

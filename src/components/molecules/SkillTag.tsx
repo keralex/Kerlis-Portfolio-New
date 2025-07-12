@@ -1,4 +1,4 @@
-import { Badge } from "@/components/atoms/Badge";
+import { Badge } from "../atoms/Badge";
 import { motion } from "framer-motion";
 
 interface SkillTagProps {

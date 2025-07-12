@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { SkillTag } from "@/components/molecules/SkillTag";
-import { personalInfo, skills } from "@/data/portfolio";
+import { SkillTag } from "../molecules/SkillTag";
+import { personalInfo, skills } from "../../data/portfolio";
 
 function About() {
   return (
@@ -22,7 +22,7 @@ function About() {
             Passionate about creating exceptional user experiences through clean code and innovative design
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             className="space-y-6"
@@ -37,7 +37,7 @@ function About() {
                 {personalInfo.summary}
               </p>
             </div>
-            
+
             <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 border border-gray-200 dark:border-gray-600 hover:border-purple-500 dark:hover:border-purple-400 transition-colors duration-300">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">What I Do</h3>
               <div className="space-y-3">
@@ -60,7 +60,7 @@ function About() {
               </div>
             </div>
           </motion.div>
-          
+
           <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 50 }}
@@ -69,7 +69,7 @@ function About() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Technical Skills</h3>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Languages */}
               <div className="bg-gradient-to-br from-purple-500/10 to-indigo-500/10 dark:from-purple-500/20 dark:to-indigo-500/20 rounded-xl p-4 border border-purple-500/20 dark:border-purple-500/30">
@@ -80,7 +80,7 @@ function About() {
                   ))}
                 </div>
               </div>
-              
+
               {/* Frameworks */}
               <div className="bg-gradient-to-br from-indigo-500/10 to-pink-500/10 dark:from-indigo-500/20 dark:to-pink-500/20 rounded-xl p-4 border border-indigo-500/20 dark:border-indigo-500/30">
                 <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Frameworks</h4>
@@ -90,7 +90,7 @@ function About() {
                   ))}
                 </div>
               </div>
-              
+
               {/* UI Libraries */}
               <div className="bg-gradient-to-br from-pink-500/10 to-purple-500/10 dark:from-pink-500/20 dark:to-purple-500/20 rounded-xl p-4 border border-pink-500/20 dark:border-pink-500/30">
                 <h4 className="font-semibold text-pink-600 dark:text-pink-400 mb-3">UI Libraries</h4>
@@ -100,7 +100,7 @@ function About() {
                   ))}
                 </div>
               </div>
-              
+
               {/* Tools */}
               <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20 rounded-xl p-4 border border-purple-500/20 dark:border-purple-500/30">
                 <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-3">Tools & Testing</h4>

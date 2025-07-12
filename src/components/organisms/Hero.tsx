@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/atoms/Button";
-import { personalInfo } from "@/data/portfolio";
+import { Button } from "../atoms/Button";
+import { personalInfo } from "../../data/portfolio";
 
 function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-indigo-500/10 to-pink-500/10 dark:from-purple-500/20 dark:via-indigo-500/20 dark:to-pink-500/20"></div>
-      
+
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -31,14 +31,14 @@ function Hero() {
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
         />
       </div>
-      
+
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h1 
+          <motion.h1
             className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -49,8 +49,8 @@ function Hero() {
               {personalInfo.name}
             </span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,8 +58,8 @@ function Hero() {
           >
             {personalInfo.title} with 5+ years of experience crafting beautiful, scalable web applications with React.js and modern technologies.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

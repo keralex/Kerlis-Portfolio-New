@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { ExperienceCard } from "@/components/molecules/ExperienceCard";
-import { experiences } from "@/data/portfolio";
+import { ExperienceCard } from "../molecules/ExperienceCard";
+import { experiences } from "../../data/portfolio";
 
 function Experience() {
   return (
@@ -22,11 +22,11 @@ function Experience() {
             My professional journey building innovative web applications
           </p>
         </motion.div>
-        
+
         <div className="relative">
           {/* Timeline Line */}
           <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 retro-gradient"></div>
-          
+
           <div className="space-y-12">
             {experiences.map((experience, index) => (
               <ExperienceCard
