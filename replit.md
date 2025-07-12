@@ -24,13 +24,13 @@ Preferred communication style: Simple, everyday language.
 
 ## System Architecture
 
-The application follows a monorepo structure with clear separation between client and server code:
+The application is now a pure React-only frontend project:
 
 - **Frontend**: React SPA with TypeScript, using Vite for development and build tooling
-- **Backend**: Express.js server with TypeScript support
-- **Database**: PostgreSQL with Drizzle ORM for type-safe database operations
+- **No Backend**: Completely static React application with no server dependencies
+- **No Database**: All data is static and stored in TypeScript files
 - **Styling**: Tailwind CSS with custom design system and shadcn/ui components
-- **State Management**: React Context for theme management, TanStack Query for server state
+- **State Management**: React Context for theme management only
 
 ## Key Components
 
@@ -41,12 +41,12 @@ The application follows a monorepo structure with clear separation between clien
 - **Animations**: Framer Motion for smooth animations and transitions
 - **Theming**: Custom theme system with light/dark mode support
 
-### Backend Architecture
-- **Server**: Express.js with TypeScript
-- **Database Layer**: Drizzle ORM with PostgreSQL dialect
-- **Storage Interface**: Abstracted storage layer with in-memory implementation for development
-- **API Structure**: RESTful API design with /api prefix for all endpoints
-- **Development Tools**: Hot reloading with Vite integration
+### File Structure
+- **Root Level**: All React files moved to root directory
+- **Static Data**: Portfolio content stored in `src/data/portfolio.ts`
+- **Components**: Atomic design structure in `src/components/`
+- **Assets**: Static files served from `public/` directory
+- **No Server Dependencies**: Completely removed server folder and backend code
 
 ### Design System
 - **Color Scheme**: Retro-inspired purple, indigo, and pink gradients
@@ -58,9 +58,9 @@ The application follows a monorepo structure with clear separation between clien
 
 1. **Static Data**: Portfolio content (experience, skills, projects) stored in TypeScript data files
 2. **Theme Management**: Context-based theme state with localStorage persistence
-3. **Form Handling**: Contact form with validation and toast notifications
-4. **Database Operations**: User management through abstracted storage interface
-5. **API Communication**: TanStack Query for server state management and caching
+3. **Contact Information**: Static contact details with direct links (email, LinkedIn)
+4. **CV Download**: PDF served directly from public directory
+5. **No API Communication**: Pure frontend application with no server requests
 
 ## External Dependencies
 
@@ -87,15 +87,14 @@ The application follows a monorepo structure with clear separation between clien
 
 ## Deployment Strategy
 
-The application is configured for deployment on Replit with the following setup:
+The application is configured for deployment on Replit as a React-only frontend:
 
-1. **Development**: `npm run dev` - Runs both frontend and backend in development mode
-2. **Build**: `npm run build` - Builds the frontend with Vite and bundles the backend with ESBuild
-3. **Production**: `npm start` - Serves the built application
-4. **Database**: Uses Neon Database (PostgreSQL) with connection via environment variables
+1. **Development**: `vite --host 0.0.0.0 --port 5173` - Runs only the Vite development server
+2. **Build**: `vite build` - Builds the React application for production
+3. **Production**: `vite preview` - Serves the built static files
+4. **Static Assets**: CV and other files served from the public directory
 
 ### Environment Configuration
-- **DATABASE_URL**: PostgreSQL connection string for production database
 - **NODE_ENV**: Environment flag for development/production modes
 - **REPL_ID**: Replit-specific environment variable for development features
 
