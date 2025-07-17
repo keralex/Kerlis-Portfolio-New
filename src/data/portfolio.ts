@@ -6,16 +6,16 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/kerlis-aguado",
   location: "Argentina",
   languages: ["Spanish (native)", "English (B2)"],
-  summary: "Experienced Frontend Developer with 5+ years building scalable SPAs using React.js, Next.js, TypeScript, Material UI, and Tailwind CSS. Proficient in Agile environments, UI/UX best practices, RESTful API integration, and automated testing with Jest. Passionate about performance optimization and accessible design."
+  summary: "Experienced Frontend Developer with 5+ years building web aplications using React.js, Next.js, TypeScript, Material UI, and Tailwind CSS. Proficient in Agile environments, UI/UX best practices, RESTful API integration, and testing with Jest. Passionate about performance optimization and accessible design."
 };
 
 export const skills = {
   languages: ["JavaScript", "TypeScript", "HTML", "CSS", "SCSS"],
-  frameworks: ["React.js", "Next.js", "Vue.js", "jQuery", "Redux", "React Context"],
-  styling: ["Material UI", "Tailwind CSS", "Styled Components"],
+  technologies: ["React.js", "Next.js", "Vue.js", "React Native", "jQuery", "Redux", "React Context", "Node.js", "Express"],
+  styling: ["Material UI", "Tailwind CSS", "Styled Components", "Bootstrap"],
   mobile: ["React Native"],
-  testing: ["React Testing Library", "Jest", "Vitest"],
-  tools: ["Node.js", "Git", "GitHub", "GitLab", "Bitbucket", "GraphQL", "REST APIs"]
+  testing: ["React Testing Library", "Jest"],
+  tools: [ "Git", "GitHub", "GitLab", "Bitbucket", "GraphQL", "REST APIs"]
 };
 
 export const experiences = [

@@ -83,9 +83,9 @@ function About() {
 
               {/* Frameworks */}
               <div className="bg-gradient-to-br from-indigo-500/10 to-pink-500/10 dark:from-indigo-500/20 dark:to-pink-500/20 rounded-xl p-4 border border-indigo-500/20 dark:border-indigo-500/30">
-                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Frameworks</h4>
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Technologies</h4>
                 <div className="flex flex-wrap gap-2">
-                  {skills.frameworks.map((skill, index) => (
+                  {skills.technologies.map((skill, index) => (
                     <SkillTag key={index} skill={skill} />
                   ))}
                 </div>
