@@ -7,13 +7,13 @@ interface ProjectCardProps {
   image: string;
   technologies: string[];
   demoUrl: string;
-  githubUrl: string;
+  githubUrl?: string;
 }
 
 function ProjectCard({ title, description, image, technologies, demoUrl, githubUrl }: ProjectCardProps) {
   return (
     <motion.div
-      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-300"
+      className="bg-white dark:bg-gray-800 lg:h-full rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-300"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
@@ -29,29 +29,33 @@ function ProjectCard({ title, description, image, technologies, demoUrl, githubU
         <p className="text-gray-600 dark:text-gray-300 mb-4">
           {description}
         </p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {technologies.map((tech, index) => (
-            <Badge key={index} variant="primary" size="sm">
-              {tech}
-            </Badge>
-          ))}
-        </div>
-        <div className="flex space-x-3">
-          <a
-            href={demoUrl}
-            className="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-200 transition-colors"
-          >
-            <i className="fas fa-external-link-alt"></i>
-          </a>
-          <a
+        <div>
+
+          <div className="flex flex-wrap gap-2 mb-4">
+            {technologies.map((tech, index) => (
+              <Badge key={index} variant="primary" size="sm">
+                {tech}
+              </Badge>
+            ))}
+          </div>
+          <div className="flex space-x-3">
+            <a
+              href={demoUrl}
+              target="_blank"
+              className="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-200 transition-colors"
+            >
+              <i className="fas fa-external-link-alt"></i>
+            </a>
+            {/* <a
             href={githubUrl}
             className="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-200 transition-colors"
           >
             <i className="fab fa-github"></i>
-          </a>
+          </a> */}
+          </div>
         </div>
       </div>
-    </motion.div>
+    </motion.div >
   );
 }
 

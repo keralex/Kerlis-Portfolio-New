@@ -25,7 +25,7 @@ export const experiences = [
     position: "Frontend Developer",
     location: "Argentina",
     period: "Oct. 2024 - Jun. 2025",
-    current: true,
+    current: false,
     responsibilities: [
       "Developed high-quality websites using React.js, TypeScript, SASS, and Material UI",
       "Participated in product decision-making, providing suggestions and solutions",
@@ -82,30 +82,28 @@ export const experiences = [
 export const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "React-based e-commerce platform with RESTful API integration, cart management, and order processing.",
+    title: "FarmaTouch",
+    description: "B2B e-commerce platform for pharmacies, focused on performance and scalability. Developed reusable components and handled API integrations. Actively contributed to improving the project’s architecture and reducing technical debt to support better scalability and long-term maintainability.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["React", "TypeScript", "Material UI"],
-    demoUrl: "#",
+    technologies: ["React", "TypeScript", "Material UI", "Zustand"],
+    demoUrl: "https://farmatouch.com/pedidos-frontend/",
     githubUrl: "#"
   },
   {
     id: 2,
-    title: "Educational Mobile App",
-    description: "React Native app for educational video distribution with offline access and progress tracking.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["React Native", "Node.js", "Redux"],
-    demoUrl: "#",
-    githubUrl: "#"
+    title: "MetLife",
+    description: "Corporate website for a Chilean health insurance company. I contributed to the development of responsive and accessible interfaces using custom components built with Material UI. Worked on key sections of the site to ensure a clean and consistent user experience.",
+    image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["React", "TypeScript", "Material UI", "Redux"],
+    demoUrl: "https://w3.metlife.cl/",
   },
   {
     id: 3,
-    title: "VTEX E-commerce Sites",
-    description: "Multiple e-commerce implementations on VTEX platform with custom UX/UI designs.",
-    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["VTEX", "React", "SASS"],
-    demoUrl: "#",
-    githubUrl: "#"
+    title: "Samsung",
+    description: "Collaborated on the official Samsung Argentina website. Worked on implementing marketing and product sections within the VTEX platform, ensuring consistency with global branding and a high-quality user experience.",
+    image: "https://images.unsplash.com/photo-1691073112675-9685bc6779bf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["VTEX", "React", "Javascript", "SASS", "JQuery"],
+    demoUrl: "https://www.samsung.com/ar/",
   }
 ];
 

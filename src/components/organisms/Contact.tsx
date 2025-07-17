@@ -126,7 +126,8 @@ function Contact() {
                 </motion.a>
 
                 <motion.a
-                  href="#"
+                  href="https://github.com/keralex"
+                  target="_blank"
                   className="group flex flex-col items-center space-y-3"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -137,29 +138,9 @@ function Contact() {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">GitHub</span>
                 </motion.a>
 
-                <motion.a
-                  href="#"
-                  className="group flex flex-col items-center space-y-3"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <div className="w-16 h-16 retro-gradient rounded-full flex items-center justify-center text-white group-hover:opacity-90 transition-opacity duration-200">
-                    <i className="fab fa-twitter text-xl"></i>
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Twitter</span>
-                </motion.a>
 
-                <motion.a
-                  href={`mailto:${personalInfo.email}`}
-                  className="group flex flex-col items-center space-y-3"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <div className="w-16 h-16 retro-gradient-alt rounded-full flex items-center justify-center text-white group-hover:opacity-90 transition-opacity duration-200">
-                    <i className="fas fa-envelope text-xl"></i>
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Email</span>
-                </motion.a>
+
+
               </div>
             </div>
           </motion.div>
